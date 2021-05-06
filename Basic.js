@@ -45,4 +45,18 @@
     }
 
 }
+const prompt = require('prompt-sync')({sigint: true});
+function checkLeapYear(year) {
+
+    if ((0 == year % 4) && (0 != year % 100) || (0 == year % 400)) {
+        console.log(year + ' is a leap year');
+    } else {
+        console.log(year + ' is not a leap year');
+    }
+}
+let year = prompt('Enter the year :');
+year = Number(year);
+checkLeapYear(year);
+
+
 
