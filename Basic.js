@@ -1,5 +1,4 @@
 
-
 {
     let num1 = Math.floor(Math.random()*(999-100+1)+100);
     let num2 = Math.floor(Math.random()*(999-100+1)+100);
@@ -45,7 +44,7 @@
     }
 
 }
-const prompt = require('prompt-sync')({sigint: true});
+
 function checkLeapYear(year) {
 
     if ((0 == year % 4) && (0 != year % 100) || (0 == year % 400)) {
@@ -54,9 +53,19 @@ function checkLeapYear(year) {
         console.log(year + ' is not a leap year');
     }
 }
-let year = prompt('Enter the year :');
-year = Number(year);
-checkLeapYear(year);
 
+function flipCoin(){
+    const IS_HEAD = 0;
+    const IS_TAIL = 1;
+    let probability = Math.floor(Math.random()*10)/2;
+    if(probability == IS_HEAD){
+        console.log("Head");
+    }
+    else {
+        console.log("Tail");
+    }
+}
+
+flipCoin();
 
 
