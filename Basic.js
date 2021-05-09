@@ -160,6 +160,5 @@ function unitConversion(){
     }
 
 }
-//numberToDayName();
 unitConversion();
 
