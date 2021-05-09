@@ -117,7 +117,49 @@ function numberToDayName()
     }else if(digit == 7){
         console.log("SUNDAY");
     }
+}
+
+function unitConversion(){
+    const prompt = require('prompt-sync')({sigint: true});
+    console.log("Enter 1 for Feet to Inch conversion");
+    console.log("Enter 2 for Inch to Feet conversion");
+    console.log("Enter 3 for Feet to Meter conversion");
+    console.log("Enter 4 for Meter to Feet conversion");
+    let choice = prompt('Enter your choice :');
+    choice = Number(choice);
+    let feet = 0;
+    let inch = 0;
+    let meter =0;
+    switch(choice){
+        
+        case 1:
+            console.log("hi");
+             feet = prompt('Enter feet value :');
+             inch = feet * 12;
+            console.log('The equivalent value of',feet,' feet in inches is ',inch,);
+            break;
+        case 2:
+            inch =  prompt('Enter inch value :');
+            feet = inch/12;
+            console.log('The equivalent value of',inch,' inch in feet is ',feet,);
+            break;
+        case 3:
+             feet = prompt('Enter feet value :');
+             meter = feet/3.2808 ;
+            console.log('The equivalent value of',feet,' feet in meter is ',meter,);
+            break;
+        case 4:
+            meter = prompt('Enter meter value :');
+            feet = meter * 3.2808;
+            console.log('The equivalent value of',meter,' meter in feet is ',feet,);
+            break;
+       default:
+           console.log("please enter valid choice between 1 to 4");
+
+
+    }
 
 }
-//digitToWord();
-numberToDayName();
+//numberToDayName();
+unitConversion();
+
